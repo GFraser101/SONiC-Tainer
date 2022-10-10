@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql/mysql-server
+    container_name: mysql
+    environment:
+
+    ports:
+
+    healthcheck:
+     
+    networks:
+      - tainer
+      
+networks:
+  tainer:
+    driver: bridge
