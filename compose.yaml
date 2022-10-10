@@ -2,8 +2,7 @@ services:
   mysql:
     image: mysql:mysql-server
     container_name: mysql
-    environment:
-    
+  
     networks:
       - tainer
       
