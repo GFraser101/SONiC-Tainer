@@ -1,5 +1,5 @@
 services:
-  mysql:
+  sql:
     image: mysql
     restart: always
     environment:
@@ -19,7 +19,15 @@ services:
       # Where our data will be persisted
     volumes:
       - ztd-db:/var/lib/mysql
+  web:
+    image: nginx
+    ports:
+      - 8000:80
+    volumes:
+      - nginx-html:/var/lib/nginx/html
+      
 # Names our volume
 volumes:
   ztd-db:
+  nginx-html:
       
