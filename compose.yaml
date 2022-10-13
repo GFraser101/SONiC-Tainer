@@ -4,7 +4,7 @@ services:
     restart: always
     environment:
       #Kea DB
-      MYSQL_DATABASE: 'kea-db'
+      MYSQL_DATABASE: 'kea'
       
       #Kea user and password
       MYSQL_USER: 'kea-user'
