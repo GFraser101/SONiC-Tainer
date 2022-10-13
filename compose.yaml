@@ -1,4 +1,10 @@
 services:
+  #ISC Kea DHCP server - build using Apine base and ISC repo using dockerfile
+  kea:
+    build:
+      context: ./kea
+      
+  # My SQL DB server for Kea DHCP data - use standard mysql docker image - latest    
   sql:
     image: mysql
     restart: always
@@ -21,6 +27,8 @@ services:
       # Where our data will be persisted
     volumes:
       - ztd-db:/var/lib/mysql
+  
+  # NGINX web server for GUI ineterface -use standard nginx docker image - latest
   web:
     image: nginx
     restart: always
