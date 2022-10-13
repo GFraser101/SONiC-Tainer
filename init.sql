@@ -1,2 +1,2 @@
-CREATE DATABASE IF NOT EXISTS dhcpd;
-GRANT ALL ON dhcpd.* TO 'kea-user'@'localhost';
+CREATE DATABASE IF NOT EXISTS dkea;
+GRANT ALL ON kea.* TO 'kea-user'@'localhost';
