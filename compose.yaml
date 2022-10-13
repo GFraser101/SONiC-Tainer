@@ -3,11 +3,13 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: 'db'
-      # So you don't have to use root, but you can if you like
-      MYSQL_USER: 'user'
-      # You can use whatever password you like
+      #Kea DB
+      MYSQL_DATABASE: 'kea-db'
+      
+      #Kea user and password
+      MYSQL_USER: 'kea-user'
       MYSQL_PASSWORD: 'password'
+      
       # Password for root access
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
@@ -21,6 +23,7 @@ services:
       - ztd-db:/var/lib/mysql
   web:
     image: nginx
+    restart: always
     ports:
       - 9080:80
     volumes:
