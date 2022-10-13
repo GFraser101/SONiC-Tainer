@@ -1,9 +1,4 @@
 services:
-  #ISC Kea DHCP server - build using Apine base and ISC repo using dockerfile
-  kea:
-    build:
-      context: ./kea
-      
   # My SQL DB server for Kea DHCP data - use standard mysql docker image - latest    
   sql:
     image: mysql
@@ -36,6 +31,11 @@ services:
       - 9080:80
     volumes:
       - nginx-html:/var/lib/nginx/html
+
+  #ISC Kea DHCP server - build using Apine base and ISC repo using dockerfile
+  kea:
+    build:
+      context: ./kea
       
 # Names our volume
 volumes:
