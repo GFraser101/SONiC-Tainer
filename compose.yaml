@@ -33,9 +33,9 @@ services:
       - nginx-html:/var/lib/nginx/html
 
   #ISC Kea DHCP server - build using Apine base and ISC repo using dockerfile
-  kea:
-    build:
-      context: ./kea
+  #kea:
+  #  build:
+  #    context: ./kea
       
 # Names our volume
 volumes:
