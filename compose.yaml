@@ -42,3 +42,7 @@ volumes:
   ztd-db:
   nginx-html:
       
+networks:
+  default:
+    name: macvlan-10-1-1
+    external: true
