@@ -44,5 +44,5 @@ volumes:
       
 networks:
   default:
-    name: macvlan-10-1-1
+    name: macnet-10-1-1
     external: true
