@@ -2,6 +2,7 @@ services:
   # My SQL DB server for Kea DHCP data - use standard mysql docker image - latest    
   sql:
     image: mysql
+    container_name: sql
     restart: always
     environment:
       #Kea DB
@@ -26,6 +27,7 @@ services:
   # NGINX web server for GUI ineterface -use standard nginx docker image - latest
   web:
     image: nginx
+    container_name: web
     restart: always
     ports:
       - 9080:80
